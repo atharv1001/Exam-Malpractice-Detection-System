@@ -7,13 +7,20 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>Project Working!</h1>
-<p> This is new Feature (dropdown)</p>
-<p> THis is main branch </p>
+<form action="login" method="post">
+    <input type="email" name="email" required>
+    <input type="password" name="password" required>
+    <button type="submit">Login</button>
+</form>
 
-<h1>This is main branch change 1</h1>
 
-<h1>This is main branch change 2</h1>
+<%
+    if (request.getParameter("error") != null) {
+%>
+    <p style="color:red;">Invalid email or password</p>
+<%
+    }
+%>
 
 </body>
 </html>
